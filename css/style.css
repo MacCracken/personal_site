@@ -642,6 +642,15 @@ blockquote span img {
 	width: 60px;
 	height: 60px;
 	margin: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.3s ease;
+}
+
+.menu.menu-open .menu-item {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .menu .but-menu .line {
@@ -745,10 +754,14 @@ blockquote span img {
 	transform: translate3d(-85px, -30px, 0);
 }
 
-.social-toggle {
+.socials-toggle {
 	-webkit-transform: translate3d(0px, 85px, 0);
 	-ms-transform: translate3d(0px, 85px, 0);
 	transform: translate3d(0px, 85px, 0);
+}
+
+.social-toggle {
+	/* This class controls the visibility of social icons */
 }
 
 .social-flyout {
@@ -2516,6 +2529,11 @@ blockquote span img {
 		-webkit-transform: translate3d(-70px, -15px, 0);
 		-ms-transform: translate3d(-70px, -15px, 0);
 		transform: translate3d(-70px, -15px, 0);
+	}
+	.socials-toggle {
+		-webkit-transform: translate3d(0px, 70px, 0);
+		-ms-transform: translate3d(0px, 70px, 0);
+		transform: translate3d(0px, 70px, 0);
 	}
 }
 

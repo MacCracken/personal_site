@@ -42,9 +42,11 @@ $(document).ready(function() {
 
 	$('.but-menu').on('click', function() {
 		var $this = $(this);
+		var $menu = $('.menu');
 		
 		// Toggle menu state
 		$this.toggleClass('menu-toggle');
+		$menu.toggleClass('menu-open');
 		
 		// Add bounce animation
 		$this.addClass('animating');
@@ -69,7 +71,7 @@ $(document).ready(function() {
 		
 		// Socials Flyout
 		setTimeout(function() {
-			$('.social-flyout').toggleClass('social-toggle');
+			$('.social-flyout').toggleClass('socials-toggle');
 		}, 400);
 	});
 	
@@ -98,12 +100,13 @@ $(document).ready(function() {
 	// Close Menu
 	$('.close-page').on('click', function() {
 		$('.but-menu').addClass('menu-toggle');
+		$('.menu').removeClass('menu-open');
 		
 		// Close all flyouts
 		$('.but-about').removeClass('about-toggle');
 		$('.but-resume').removeClass('resume-toggle');
 		$('.but-contact').removeClass('contact-toggle');
-		$('.social-flyout').removeClass('social-toggle');
+		$('.social-flyout').removeClass('socials-toggle social-toggle');
 
 		$(this).parents('.section').fadeOut("slow");
 			
