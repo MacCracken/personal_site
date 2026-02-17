@@ -708,6 +708,9 @@ blockquote span img {
 	-webkit-transform: translateZ(0);
 	-ms-transform: translateZ(0);
 	transform: translateZ(0);
+}
+
+.but-menu.animating {
 	-webkit-animation: bounce 1s ease-in-out;
 	animation: bounce 1s ease-in-out;
 }
@@ -740,6 +743,53 @@ blockquote span img {
 	-webkit-transform: translate3d(-85px, -30px, 0);
 	-ms-transform: translate3d(-85px, -30px, 0);
 	transform: translate3d(-85px, -30px, 0);
+}
+
+.social-toggle {
+	-webkit-transform: translate3d(0px, 85px, 0);
+	-ms-transform: translate3d(0px, 85px, 0);
+	transform: translate3d(0px, 85px, 0);
+}
+
+.social-flyout {
+	z-index: 6;
+}
+
+.social-flyout .social-icons {
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 15px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s ease;
+}
+
+.social-toggle .social-icons {
+	opacity: 1;
+	pointer-events: auto;
+	bottom: 85px;
+}
+
+.social-flyout .social-icons a {
+	width: 45px;
+	height: 45px;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #1a2a41;
+	font-size: 18px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	transition: all 0.3s ease;
+}
+
+.social-flyout .social-icons a:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 15px 0 #fff;
 }
 
 .menu .hide {
@@ -872,10 +922,12 @@ blockquote span img {
 .home .copy {
 	position: absolute;
 	bottom: 0;
-	right: 20px;
+	left: 50%;
+	transform: translateX(-50%);
 	color: #fff;
 	font-size: 12px;
 	z-index: 1;
+	text-align: center;
 }
 
 /* Addition Background */
