@@ -34,7 +34,8 @@
     </head>
     <body>
 		
-		<!-- Preloader -->
+		<!-- Preloader - Disabled for cleaner, modern experience -->
+		<!--
 		<div id="preloader">
 			<div class="loading">
 				<div class="circle"></div>
@@ -52,12 +53,13 @@
 				</div>
 			</div>	
 		</div>
+		-->
 		
 		<!-- Home Section -->
 		<section class="home" style="background-image: url('img/home-bg.jpg')">
 			
-			<!-- Particles -->
-			<div id="particles-js"></div>
+			<!-- Particles - Disabled for cleaner design -->
+			<!-- <div id="particles-js"></div> -->
 			
 			<!-- Banner -->
 			<div class="banner">
@@ -128,7 +130,7 @@
 			
 			<!-- Copyright -->
 			<div class="copy">
-            	<p>2020 © MacCracken. All Right Reserved.</p>
+            	<p>2025 © MacCracken. All Right Reserved.</p>
         	</div>
 		</section>
 		
@@ -769,12 +771,182 @@
         <script src="js/main.js"></script>
         <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
 		
-		<!-- Page Script -->
+		<!-- AI Chat Widget -->
+		<div id="ai-chat-widget" class="ai-chat-widget">
+			<button class="ai-chat-toggle" id="aiChatToggle">
+				<i class="fas fa-robot"></i>
+				<span class="ai-chat-tooltip">Ask about my work</span>
+			</button>
+			<div class="ai-chat-container" id="aiChatContainer">
+				<div class="ai-chat-header">
+					<div class="ai-chat-title">
+						<i class="fas fa-robot"></i>
+						<span>Ask AI About Me</span>
+					</div>
+					<button class="ai-chat-close" id="aiChatClose">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="ai-chat-messages" id="aiChatMessages">
+					<div class="ai-message ai-bot">
+						<div class="ai-message-avatar">
+							<i class="fas fa-robot"></i>
+						</div>
+						<div class="ai-message-content">
+							<p>Hi! I'm an AI assistant for Robert. Ask me anything about his work in:</p>
+							<ul class="ai-quick-topics">
+								<li><i class="fas fa-code"></i> Software Engineering</li>
+								<li><i class="fas fa-vial"></i> QA Automation</li>
+								<li><i class="fas fa-music"></i> Music Composition</li>
+								<li><i class="fas fa-sliders-h"></i> Audio Engineering</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ai-chat-input-container">
+					<input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Ask about my experience...">
+					<button class="ai-chat-send" id="aiChatSend">
+						<i class="fas fa-paper-plane"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Page Script - Particles disabled -->
+		<!--
 		<script src="js/particles.min.js"></script>
 		<script>
 			particlesJS.load('particles-js', 'js/particles.json', function() {
 				console.log('callback - particles.js config loaded');
         	});		
+		</script>
+		-->
+		
+		<!-- AI Chat Script -->
+		<script>
+			(function() {
+				const chatToggle = document.getElementById('aiChatToggle');
+				const chatContainer = document.getElementById('aiChatContainer');
+				const chatClose = document.getElementById('aiChatClose');
+				const chatInput = document.getElementById('aiChatInput');
+				const chatSend = document.getElementById('aiChatSend');
+				const chatMessages = document.getElementById('aiChatMessages');
+
+				const knowledgeBase = {
+					software: {
+						keywords: ['software', 'engineer', 'developer', 'code', 'programming', 'dev', 'backend', 'web', 'automation', 'testing'],
+						response: "I'm a Staff-level Software Engineer with 15+ years in software testing and 7+ years in test automation. I specialize in DevOps, CI/CD pipelines, and AWS infrastructure. I led QA automation and release cycles for major brands like Hollywood Reporter, Billboard, Spin, Vibe & Stereogum at Valence Media Group."
+					},
+					qa: {
+						keywords: ['qa', 'test', 'automation', 'selenium', 'cypress', 'quality'],
+						response: "I specialize in Software Engineering in Test with extensive experience in automated testing frameworks. I've developed comprehensive test suites, CI/CD pipelines, and testing infrastructure. I led all QA efforts for multiple Valence Media brands and built automation from the ground up at OmniUpdate."
+					},
+					aws: {
+						keywords: ['aws', 'amazon', 'cloud', 'infrastructure', 'devops'],
+						response: "I'm an AWS Certified Developer - Associate. I can set up complete website backends using AWS services and establish CI/CD pipelines for automated deployments."
+					},
+					audio: {
+						keywords: ['audio', 'sound', 'mixing', 'mastering', 'engineering', 'recording'],
+						response: "I'm a skilled audio engineer with expertise in recording, mixing, and mastering. I work across music production, helping artists achieve professional sound quality for their projects."
+					},
+					music: {
+						keywords: ['music', 'composition', 'composer', 'film', 'game', 'score', 'soundtrack'],
+						response: "I'm a film and video game composer. I create original scores and music for visual media, bringing stories to life through sound. I handle everything from composition to final production."
+					},
+					experience: {
+						keywords: ['experience', 'work', 'career', 'job', 'history', 'background'],
+						response: "I have 15+ years in tech (Software QA, Automation, DevOps) and extensive experience in music/audio production. This unique combination makes me effective at creative problem-solving and bridging technical and artistic domains."
+					},
+					polymath: {
+						keywords: ['polymath', 'creative', 'artist', 'skills', 'both', 'all'],
+						response: "I'm a true polymath - equally comfortable debugging complex automation frameworks as I am composing film scores. My dual expertise in tech and creative arts gives me a unique perspective for problem-solving and cross-disciplinary projects."
+					},
+					contact: {
+						keywords: ['contact', 'email', 'hire', 'work together', 'collaborate', 'reach'],
+						response: "You can reach me at robert.maccracken@gmail.com or through the contact form on this site. I'm always open to interesting projects!"
+					}
+				};
+
+				function findBestResponse(query) {
+					query = query.toLowerCase();
+					for (const category in knowledgeBase) {
+						const data = knowledgeBase[category];
+						if (data.keywords.some(keyword => query.includes(keyword))) {
+							return data.response;
+						}
+					}
+					return "I'm Robert's AI assistant. Ask me about his software engineering work, QA automation, audio engineering, music composition, or how these skills combine to make him a unique polymath!";
+				}
+
+				function addMessage(text, isBot) {
+					const messageDiv = document.createElement('div');
+					messageDiv.className = `ai-message ${isBot ? 'ai-bot' : 'ai-user'}`;
+					messageDiv.innerHTML = `
+						<div class="ai-message-avatar">
+							<i class="fas ${isBot ? 'fa-robot' : 'fa-user'}"></i>
+						</div>
+						<div class="ai-message-content">
+							<p>${text}</p>
+						</div>
+					`;
+					chatMessages.appendChild(messageDiv);
+					chatMessages.scrollTop = chatMessages.scrollHeight;
+				}
+
+				function showTyping() {
+					const typingDiv = document.createElement('div');
+					typingDiv.className = 'ai-message ai-bot ai-typing';
+					typingDiv.id = 'aiTyping';
+					typingDiv.innerHTML = `
+						<div class="ai-message-avatar">
+							<i class="fas fa-robot"></i>
+						</div>
+						<div class="ai-message-content">
+							<div class="ai-typing-indicator">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					`;
+					chatMessages.appendChild(typingDiv);
+					chatMessages.scrollTop = chatMessages.scrollHeight;
+				}
+
+				function hideTyping() {
+					const typing = document.getElementById('aiTyping');
+					if (typing) typing.remove();
+				}
+
+				function handleSend() {
+					const text = chatInput.value.trim();
+					if (!text) return;
+					
+					addMessage(text, false);
+					chatInput.value = '';
+					
+					showTyping();
+					
+					setTimeout(() => {
+						hideTyping();
+						const response = findBestResponse(text);
+						addMessage(response, true);
+					}, 1000 + Math.random() * 1000);
+				}
+
+				chatToggle.addEventListener('click', () => {
+					chatContainer.classList.add('active');
+				});
+
+				chatClose.addEventListener('click', () => {
+					chatContainer.classList.remove('active');
+				});
+
+				chatSend.addEventListener('click', handleSend);
+				chatInput.addEventListener('keypress', (e) => {
+					if (e.key === 'Enter') handleSend();
+				});
+			})();
 		</script>
     </body>
 </html>
