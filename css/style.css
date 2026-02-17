@@ -644,7 +644,6 @@ blockquote span img {
 	margin: 10px;
 	opacity: 0;
 	pointer-events: none;
-	transform: translate3d(0, 0, 0);
 	transition: all 0.3s ease;
 }
 
