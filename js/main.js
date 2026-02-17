@@ -79,7 +79,7 @@ $(document).ready(function() {
 	});
 
 	// Full Page Layout
-	$('.menu-item i').on('click', function() {
+	$('.menu-item i').not('.socials-show').on('click', function() {
 
 		setTimeout(function() {
 			$('.page-background').addClass('scale');
@@ -87,6 +87,12 @@ $(document).ready(function() {
 
 		$($menu_but).addClass('hide');
 	
+	});
+
+	// Socials Flyout Toggle
+	$('i.socials-show').on('click', function(e) {
+		e.stopPropagation();
+		$('.social-flyout').toggleClass('social-toggle');
 	});
 
 	// Close Menu
