@@ -22,6 +22,7 @@
             <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -40,8 +41,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Robert MacCracken</h1>
-                    <p class="hero-title">Staff Engineer | Platform Infrastructure</p>
-                    <p class="hero-subtitle">Building reliable systems and automating everything</p>
+                    <p class="hero-title">Staff Engineer | Creator of SecureYeoman</p>
+                    <p class="hero-subtitle">Building secure AI infrastructure and automating everything</p>
                     <div class="hero-cta">
                         <a href="#about" class="btn-primary">Learn More</a>
                         <a href="#contact" class="btn-secondary">Get in Touch</a>
@@ -62,15 +63,15 @@
                     </div>
                     <div class="about-text">
                         <h3>Problem Solving Developer & Creative Artist</h3>
-                        <p>I'm a <strong>Staff-level Software Engineer</strong> specializing in <strong>Software Engineering In Test</strong> and <strong>DevOps</strong> with 15+ years of experience in software testing and 7+ years in test automation and continuous integration pipelines.</p>
-                        <p>Beyond tech, I'm a <em>creative artist</em> with skills in music composition and production, including audio engineering (recording, mixing, mastering), songwriting, and film/video game scoring.</p>
-                        <p>This unique combination makes me effective at creative problem-solving and bridging technical and artistic domains.</p>
+                        <p>I'm a <strong>Staff-level Software Engineer</strong> and <strong>CTO of LightOceanStudios</strong>, a Creative & Consulting Service company. I specialize in <strong>DevOps</strong>, <strong>AI Infrastructure</strong>, and <strong>Secure Software Development</strong> with 15+ years of experience.</p>
+                        <p>My main focus is <strong>SecureYeoman</strong> — a self-hosted, enterprise-hardened AI assistant that works for you, not the platform. 7,400+ tests, MIT licensed, 120+ MCP tools. Your data doesn't train their models.</p>
+                        <p>LightOceanStudios also creates handcrafted candles, blending technical innovation with artisanal craftsmanship.</p>
                         <div class="about-tags">
-                            <span class="tag">Software Engineering</span>
-                            <span class="tag">QA Automation</span>
+                            <span class="tag">SecureYeoman</span>
                             <span class="tag">DevOps</span>
+                            <span class="tag">AI Infrastructure</span>
+                            <span class="tag">QA Automation</span>
                             <span class="tag">AWS</span>
-                            <span class="tag">Audio Production</span>
                         </div>
                         <a href="doc/maccracken_cv.pdf" class="btn-st" target="_blank">Download CV</a>
                     </div>
@@ -85,6 +86,15 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 - Present</span>
+                            <h3>CTO</h3>
+                            <h4>LightOceanStudios</h4>
+                            <p>Creative & Consulting Service company. Main focus: building SecureYeoman — a self-hosted, enterprise-hardened AI assistant. Also creates handcrafted candles.</p>
+                        </div>
+                    </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -129,6 +139,58 @@
                             <p>2020</p>
                             <span class="education-detail">Certified</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>SecureYeoman</h3>
+                        <p class="project-description">Self-hosted, enterprise-hardened AI assistant. Your data doesn't train their models. Your conversations aren't their product.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Assistant</span>
+                            <span class="tag">Enterprise Security</span>
+                            <span class="tag">MCP Tools</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-star"></i> 7,400+ Tests</span>
+                            <span><i class="fas fa-code"></i> MIT License</span>
+                        </div>
+                        <a href="https://secureyeoman.ai" target="_blank" class="btn-st">Learn More</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Agnostic</h3>
+                        <p class="project-description">Agentic QA Team: Dockerized Team AI with MBT, self-healing, fuzzy verification.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Testing</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                        <a href="https://github.com/MacCracken/Agnostic" target="_blank" class="btn-st">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>LightOceanStudios</h3>
+                        <p class="project-description">Handcrafted candles and creative consulting services.</p>
+                        <div class="project-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Consulting</span>
+                        </div>
+                        <a href="https://github.com/MacCracken/lightoceanstudios" target="_blank" class="btn-st">View on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -358,7 +420,15 @@
             const knowledgeBase = {
                 software: {
                     keywords: ['software', 'engineer', 'developer', 'code', 'programming', 'dev', 'backend', 'web', 'automation', 'testing'],
-                    response: "I'm a Staff-level Software Engineer with 15+ years in software testing and 7+ years in test automation. I specialize in DevOps, CI/CD pipelines, and AWS infrastructure. I led QA automation and release cycles for major brands like Hollywood Reporter, Billboard, Spin, Vibe & Stereogum at Valence Media Group."
+                    response: "I'm a Staff-level Software Engineer and CTO of LightOceanStudios. I specialize in DevOps, AI Infrastructure, and Secure Software Development. My main focus is SecureYeoman — a self-hosted, enterprise-hardened AI assistant that works for you, not the platform."
+                },
+                secureyeoman: {
+                    keywords: ['secureyeoman', 'ai assistant', 'self-hosted', 'enterprise', 'mcp', 'chatbot'],
+                    response: "SecureYeoman is my flagship project — a self-hosted, enterprise-hardened AI assistant. 7,400+ tests, MIT licensed, 120+ MCP tools. Your data doesn't train their models. Your conversations aren't their product. It's built for security with RBAC, JWT auth, AES-256 encryption, and cryptographic audit chains."
+                },
+                lightoceanstudios: {
+                    keywords: ['lightoceanstudios', 'los', 'candles', 'cto', 'consulting'],
+                    response: "LightOceanStudios is a Creative & Consulting Service company I founded. We also create handcrafted candles. My main focus there is building SecureYeoman."
                 },
                 qa: {
                     keywords: ['qa', 'test', 'automation', 'selenium', 'cypress', 'quality'],
@@ -398,7 +468,7 @@
                         return data.response;
                     }
                 }
-                return "I'm Robert's AI assistant. Ask me about his software engineering work, QA automation, audio engineering, music composition, or how these skills combine to make him a unique polymath!";
+                return "I'm Robert's AI assistant. Ask me about SecureYeoman (his flagship self-hosted AI project), LightOceanStudios, his software engineering work, or QA automation!";
             }
 
             function addMessage(text, isBot) {
