@@ -22,12 +22,6 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 - Main focus: Building SecureYeoman — self-hosted AI assistant (7,400+ tests, MIT licensed, 120+ MCP tools)
 - Also creates handcrafted candles
 
-### Staff Engineer | Platform Infrastructure
-**2022 - 2024**
-- Led platform infrastructure initiatives
-- Built and maintained CI/CD pipelines at scale
-- Mentored junior engineers on best practices
-
 ### Senior QA Engineer | Valence Media Group
 **2015 - 2019**
 - Primary contact for testing, release cycles, automation and CI/CD pipelines
