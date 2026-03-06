@@ -59,9 +59,9 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 ### SecureYeoman (secureyeoman.ai)
 *Creator & Lead Developer*
 - Self-hosted, enterprise-hardened AI assistant
-- 7,400+ tests, MIT licensed, 120+ MCP tools
+- 16,100+ tests, AGPL-3.0 licensed, 274 MCP tools
 - Features: RBAC, JWT + API key auth, mTLS, AES-256 encryption, HMAC-SHA256 audit chain
-- 31 platform integrations (Telegram, Discord, Slack, GitHub, AWS, etc.)
+- 32 platform integrations (Telegram, Discord, Slack, GitHub, AWS, etc.)
 - DAG workflow engine with ReactFlow visual builder
 - Deployable as single binary, Docker, or Kubernetes
 
