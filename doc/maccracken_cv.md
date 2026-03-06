@@ -19,7 +19,7 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 ### CTO | LightOceanStudios
 **2024 - Present**
 - Creative & Consulting Service company
-- Main focus: Building SecureYeoman — self-hosted AI assistant (7,400+ tests, MIT licensed, 120+ MCP tools)
+- Building SecureYeoman (self-hosted enterprise AI assistant), Agnostic (multi-agent QA platform), AGNOS (AI-native Linux OS), and BullShift (Rust+Flutter trading platform)
 - Also creates handcrafted candles
 
 ### Senior QA Engineer | Valence Media Group
@@ -66,11 +66,19 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 - Deployable as single binary, Docker, or Kubernetes
 
 ### Agnostic
-- Agentic QA Team: Dockerized Team AI with MBT, self-healing, fuzzy verification
+- Multi-agent QA platform — 6 CrewAI agents, self-healing UI testing, fuzzy verification, risk-based prioritization, automated OWASP/GDPR/HIPAA compliance
+- 465+ tests, 85% coverage, Docker/Kubernetes deployable
+- github.com/MacCracken/Agnostic
 
-### LightOceanStudios
-- E-commerce site for handcrafted candles
-- github.com/MacCracken/lightoceanstudios
+### AGNOS (Agnosticos)
+- AI-native Linux OS with kernel-level agent management, Rust core services, AI shell, multi-provider LLM gateway
+- Defense-in-depth: Landlock + seccomp-bpf sandboxing, cryptographic audit trails
+- github.com/MacCracken/agnosticos
+
+### BullShift
+- Cross-platform trading platform — Rust backend (sub-100ms execution), Flutter UI, paper trading with Monte Carlo analysis
+- Multi-LLM strategy generation, real-time sentiment analysis, AES-256 encryption
+- github.com/MacCracken/bullshift
 
 ---
 
