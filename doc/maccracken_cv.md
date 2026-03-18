@@ -42,7 +42,7 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 
 ## TECHNICAL SKILLS
 
-**AI & Security:** SecureYeoman, MCP (Model Context Protocol), AI Agents, Self-hosted LLMs, Enterprise Security, RBAC, JWT, mTLS, AES-256-GCM
+**AI & Security:** SecureYeoman, MCP (Model Context Protocol), AI Agents, Self-hosted LLMs, Enterprise Security, RBAC, SSO/OIDC, SAML 2.0, WebAuthn, JWT, mTLS, AES-256-GCM
 
 **DevOps & Cloud:** AWS, Kubernetes, Docker, Terraform, CI/CD, GitHub Actions, GitLab CI, Helm
 
@@ -59,9 +59,9 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 ### SecureYeoman (secureyeoman.ai)
 *Creator & Lead Developer*
 - Self-hosted, enterprise-hardened AI assistant
-- 16,100+ tests, AGPL-3.0 licensed, 274 MCP tools
-- Features: RBAC, JWT + API key auth, mTLS, AES-256 encryption, HMAC-SHA256 audit chain
-- 32 platform integrations (Telegram, Discord, Slack, GitHub, AWS, etc.)
+- ~22,000 tests, AGPL-3.0 licensed, 485 MCP tools
+- Features: RBAC, SSO/OIDC, SAML 2.0, WebAuthn/FIDO2, mTLS, AES-256 encryption, HMAC-SHA256 audit chain
+- 38 platform integrations (Telegram, Discord, Slack, GitHub, AWS, etc.)
 - DAG workflow engine with ReactFlow visual builder
 - Deployable as single binary, Docker, or Kubernetes
 
