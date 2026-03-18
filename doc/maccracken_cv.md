@@ -19,7 +19,7 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 ### CTO | LightOceanStudios
 **2024 - Present**
 - Creative & Consulting Service company
-- Building SecureYeoman (self-hosted enterprise AI assistant), Agnostic (multi-agent QA platform), AGNOS (AI-native Linux OS), and BullShift (Rust+Flutter trading platform)
+- Building SecureYeoman (self-hosted enterprise AI assistant), Agnostic (general-purpose AI agent platform), AGNOS (AI-native Linux OS), and BullShift (Rust+Flutter trading platform)
 - Also creates handcrafted candles
 
 ### Senior QA Engineer | Valence Media Group
@@ -66,13 +66,16 @@ Specialize in DevOps, AI Infrastructure, Secure Software Development, and Platfo
 - Deployable as single binary, Docker, or Kubernetes
 
 ### Agnostic
-- Multi-agent QA platform — 6 CrewAI agents, self-healing UI testing, fuzzy verification, risk-based prioritization, automated OWASP/GDPR/HIPAA compliance
-- 465+ tests, 85% coverage, Docker/Kubernetes deployable
+- Containerized, general-purpose AI agent platform — CrewAI-powered crews for QA, data engineering, and DevOps
+- Self-healing UI testing, fuzzy verification, A2A protocol, multi-tenant isolation, MCP server with 27 tools
+- Automated compliance: OWASP, GDPR, PCI DSS, SOC 2, ISO 27001, HIPAA
+- 865+ tests, 85% coverage, deployable via Docker or Kubernetes
 - github.com/MacCracken/Agnostic
 
 ### AGNOS (Agnosticos)
-- AI-native Linux OS with kernel-level agent management, Rust core services, AI shell, multi-provider LLM gateway
-- Defense-in-depth: Landlock + seccomp-bpf sandboxing, cryptographic audit trails
+- AI-native Linux OS — 8 Rust crates, kernel-level agent management, AI shell, OpenAI-compatible LLM gateway, Wayland desktop
+- Defense-in-depth: Landlock + seccomp-bpf sandboxing, cryptographic audit chains
+- 8,997+ tests, ~84% coverage
 - github.com/MacCracken/agnosticos
 
 ### BullShift
